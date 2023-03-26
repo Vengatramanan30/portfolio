@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Personal portfolio</title>
+    <script src="https://kit.fontawesome.com/90363c01da.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="navigation">
+            <nav>
+                <h1>My Portfolio</h1>
+                <ul id="menubar">
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">CONTACT</a></li>
+                    <li><a href="">PROJECTS</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closem()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openm()"></i>
+            </nav>
+            <div class="info">
+                <h1> Hi , I am Vengatramanan Srinivasan</h1>
+                <p>I am a "Web desiginer" , "Python Developer" and "UI/UX Designer"</p>
+            </div>
+        </div>
+    </div>
+    <!-------about------>
+    <div id="about">
+        <div class="navigation">
+            <div class="row">
+            <div class="col1">
+                <img src="vengat.jpg" alt="this is an image">
+            </div><br><br><br>
+            <div class="col2">
+                <h2 class="title">ABOUT</h2><br>
+                <p>A person with a curiosity to learn something new for each and everyday. <br>
+                To enhance my professional skills , capabillites and knowledge in an organisation which
+            recoganizes the value of my work.</p>
+
+                    <div class="tabs">
+                        <p class="tab links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab " onclick="opentab('Courses')">Courses</p>
+                        <p class="tab " onclick="opentab('Memberships')">Memberships</p>
+                    </div>
+                    <div class="contents current" id="skills">
+                        <ul>
+                            <li><span>Python</span><br>Using to develop Games and softwares easily</li>
+                            <li><span>UI/UX</span><br>Create a desigining interface</li>
+                            <li><span>SQL</span><br>Using to write query for a given problem</li>
+                        </ul>
+                    </div>
+                    <div class="contents" id="Courses">
+                        <ul>
+                            <li><span>Python</span><br>Completed the course offered by "UDEMY"</li>
+                            <li><span>Web Development</span><br>Completed the Certification course offered by "SMARTKNOWER"</li>
+                            <li><span>SQL for Data Science</span><br>Completed the course offered by "GREAT LEARNING"</li>
+                        </ul>
+                    </div>
+                    <div class="contents" id="Memberships">
+                        <ul>
+                            <li><span>IEI </span><br>Institution Of Engineers</li>
+                            <li><span>EDC</span><br>Entrepreneur Development Cell</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+        </div>
+    </div><br><br><br><br><br><br>
+    <!-----services------> 
+    <div id="services">
+        <div class="navigation">
+            <h1 class="title">My Projects</h1>
+            <div class="myservices">
+                <div>
+                    <h2>Weather Forecater</h2><br>
+                    <p>Using API it will show the current weather of the particular place or a country</p>
+                </div>
+                <div>
+                    <h2>Online CO2 Emission Calculator</h2><br>
+                    <p>It will show how much amount of "Carbon-Di-Oxide" emitted from home and vehicles and show how many trees we need to be plant to nullify the CO2 emission</p>
+                </div>
+                <div>
+                    <h2>Billing System Using JAVA</h2><br>
+                    <p>using simple Calculation method to calculate the sum and product of the expenses</p>
+                </div>
+            </div>
+        </div><br><br><br><br><br><br><br><br><br><br>
+        <div id="contact">
+            <div class="navigation">
+                <div class="row">
+                    <div class="contact-left">
+                        <h2 class="sub-title">Contact me</h2><br>
+                        <p><i class="fa-sharp fa-solid fa-at"></i> abc@gmail.com</p>
+                        <p><i class="fa-sharp fa-solid fa-phone"></i> 9876543210</p>
+                        <div class="icons">
+                            <a href="https://www.linkedin.com/in/vengat-ramanan-5989b1192/"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                            <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                        </div>
+                        <a href="#" download class="btn btn2">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form action="">
+                            <input type="text" name="Name" placeholder="Enter Your Name" required>
+                            <input type="email" name="Email" placeholder="Enter Your Mail Id" required>
+                            <textarea name="Message" rows="6" placeholder="Enter Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="copy">
+        <p> Copyright &copy; Vengatramanan.</p>
+    </div>
+    
+    <script>
+        var tab = document.getElementsByClassName("tab");
+        var tabs = document.getElementsByClassName("contents");
+
+        function opentab(name){
+            for(tabi of tab){
+                tabi.classList.remove("links");
+            }
+            for(tabo of tabs){
+                tabo.classList.remove("current");
+            }
+            event.currentTarget.classList.add("links");
+            document.getElementById(name).classList.add("current");
+        }
+    </script>
+
+    <script>
+        var menuba = document.getElementById("menubar")
+
+        function openm(){
+            menuba.style.right = "0"
+        }
+        function closem(){
+            menuba.style.right = "-200px"
+        }
+    </script>
+    
+</body>
+</html>
